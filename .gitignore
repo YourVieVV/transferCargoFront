@@ -1,0 +1,13 @@
+# dependencies
+/node_modules
+.npmrc
+
+# production
+/build
+/dist
+
+# testing
+/coverage
+
+.idea
+.DS_Store
