@@ -1,10 +1,5 @@
-import React, {FC} from 'react';
+import React, { FC } from 'react';
 
-export const App:FC = () => {
-    console.log('==========> = ')
-    return (
-        <div>
-            Hello word!
-        </div>
-    );
+export const App: FC = () => {
+  return <div>Hello word!</div>;
 };
