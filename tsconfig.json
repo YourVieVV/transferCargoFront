@@ -10,7 +10,7 @@
     "module": "esnext",
     "importHelpers": true,
     "declaration": true,
-    "rootDir": "src",
+    "rootDir": ".",
     "jsx": "react",
     "moduleResolution": "node",
     "baseUrl": ".",
@@ -46,5 +46,10 @@
   ],
   "typeRoots": [
     "./node_modules/@types"
-  ]
+  ],
+  "ts-node": {
+  "compilerOptions": {
+    "module": "CommonJS"
+  }
+}
 }
