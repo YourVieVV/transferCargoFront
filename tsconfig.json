@@ -16,7 +16,7 @@
     "baseUrl": ".",
     "allowJs": false,
     "allowSyntheticDefaultImports": true,
-    "noUnusedLocals": true,
+    "noUnusedLocals": false,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "noImplicitAny": true,

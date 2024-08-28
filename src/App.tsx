@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import './style.scss';
 import { Header } from '@/components/header';
+import { Main } from '@/components/main';
 
 export const App: FC = () => {
   return (
@@ -17,18 +18,14 @@ export const App: FC = () => {
       >
         <Header />
       </header>
-      <main>
-        <div
-          style={{
-            width: '1920px',
-            height: '245px',
-            backgroundSize: 'contain',
-            backgroundImage: `url('../public/img.png')`,
-          }}
-        >
-          ГРУЗОВЫЕ ПЕРЕВОЗКИ Перевозка крупногабаритных грузов по России и
-          Европе. Полное экспедирование, страхование, упаковка и хранение грузов
-        </div>
+      <main
+        style={{
+          width: '100%',
+          color: '#ffffff',
+          fontFamily: 'sans-serif',
+        }}
+      >
+        <Main />
       </main>
     </div>
   );
