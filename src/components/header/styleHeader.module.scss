@@ -1,0 +1,96 @@
+@import "src/usedEverywhereStyles.module";
+
+.header{
+  height: 50px;
+  width: 100%;
+  background-color: #2f343a;
+  color: #ffffff;
+
+  @include flexBasePack($justifyContent:center);
+}
+
+.containerInHeader {
+  width: 80%;
+
+  @include flexBasePack();
+}
+
+.containerHeaderLeftSide {
+  width: 50%;
+
+  @include flexBasePack($alignItems:center);
+}
+
+.containerLogo {
+  width: 100px;
+  border-right: solid 0.2px;
+
+  @include flexBasePack($alignItems:center);
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.logoText {
+  padding-left: 3px;
+
+  @include textTheme();
+}
+
+.containerPoint {
+  width: 100px;
+
+  @include flexBasePack($alignItems:center, $justifyContent:center);
+}
+
+.point{
+  margin-right: 4px;
+}
+
+.textPointer {
+  padding-right: 20px;
+
+  @include textTheme($fontSize:7px);
+}
+
+.tabContainer {
+  width: 50%;
+
+  @include flexBasePack($alignItems:center, $justifyContent:center);
+  @include textTheme($fontSize:8px);
+}
+
+.tab {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  width: 20%;
+  justify-content: center;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.tab::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #C8A35F;
+  transition: all .5s;
+  z-index: -1;
+  transform: translateY(100%);
+}
+
+.tab:hover::before {
+  transform: translateY(0);
+  cursor: pointer;
+}
+.tab:hover {
+  cursor: pointer;
+}

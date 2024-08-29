@@ -1,42 +1,18 @@
 import React from 'react';
 import { Point } from '@/assets/point';
+import * as styleHeader from './styleHeader.module.scss';
 
 export const Header = () => {
   return (
-    <div
-      style={{
-        width: '80%',
-        display: 'flex',
-        justifyContent: 'space-between',
-      }}
-    >
-      <div
-        style={{
-          width: '50%',
-          display: 'flex',
-          alignItems: 'center',
-        }}
-      >
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            width: '100px',
-            borderRight: 'solid 0.2px',
-          }}
-        >
+    <div className={styleHeader.containerInHeader}>
+      <div className={styleHeader.containerHeaderLeftSide}>
+        <div className={styleHeader.containerLogo}>
           <img
-            style={{ width: '40px', height: '40px' }}
+            className={styleHeader.logo}
             alt={''}
             src={'../public/logo.png'}
           />
-          <span
-            style={{
-              fontSize: '10px',
-              paddingLeft: '3px',
-              fontFamily: 'sans-serif',
-            }}
-          >
+          <span className={styleHeader.logoText}>
             Project
             <br />
             Transfer
@@ -45,38 +21,20 @@ export const Header = () => {
           </span>
         </div>
 
-        <div
-          style={{
-            width: '100px',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-        >
-          <div style={{ marginRight: '3px' }}>
+        <div className={styleHeader.containerPoint}>
+          <div className={styleHeader.point}>
             <Point />
           </div>
-          <span style={{ fontSize: '7px', fontFamily: 'sans-serif' }}>
-            Наши офисы
-          </span>
+          <span className={styleHeader.textPointer}>Наши офисы</span>
         </div>
       </div>
 
-      <div
-        style={{
-          width: '50%',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'flex-end',
-          fontSize: '8px',
-          fontFamily: 'sans-serif',
-        }}
-      >
-        <div style={{ width: '60px', textAlign: 'center' }}>УСЛУГИ</div>
-        <div style={{ width: '60px', textAlign: 'center' }}>ТАРИФЫ</div>
-        <div style={{ width: '60px', textAlign: 'center' }}>БИЗНЕСУ</div>
-        <div style={{ width: '60px', textAlign: 'center' }}>ВАКАНСИИ</div>
-        <div style={{ width: '60px', textAlign: 'center' }}>КОНТАКТЫ</div>
+      <div className={styleHeader.tabContainer}>
+        <div className={styleHeader.tab}>УСЛУГИ</div>
+        <div className={styleHeader.tab}>ТАРИФЫ</div>
+        <div className={styleHeader.tab}>БИЗНЕСУ</div>
+        <div className={styleHeader.tab}>ВАКАНСИИ</div>
+        <div className={styleHeader.tab}>КОНТАКТЫ</div>
       </div>
     </div>
   );

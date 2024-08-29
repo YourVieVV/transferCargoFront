@@ -1,0 +1,27 @@
+$absent:'';
+
+@mixin flexBasePack($justifyContent:$absent, $alignItems:$absent, $alignContent:$absent, $gap:$absent){
+  display: flex;
+
+  @if $justifyContent != $absent {
+    justify-content: $justifyContent;
+  }
+  @if $alignItems != $absent {
+    align-items: $alignItems;
+  }
+  @if $alignContent != $absent {
+    align-content: $alignContent;
+  }
+  @if $gap != $absent {
+    gap: $gap;
+  }
+}
+
+@mixin textTheme($fontSize:10px, $fontWeight:$absent) {
+  font-family: sans-serif;
+  font-size: $fontSize;
+
+  @if $fontWeight != $absent {
+    font-weight: $fontWeight;
+  }
+}
