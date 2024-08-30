@@ -1,6 +1,11 @@
 $absent:'';
+$colorWhite:#ffffff;
+$colorBrown:#C8A35F;
+$colorDarkGray:#2f343a;
+$colorLightGray:#393f47;
 
-@mixin flexBasePack($justifyContent:$absent, $alignItems:$absent, $alignContent:$absent, $gap:$absent){
+@mixin flexBasePack($justifyContent:$absent, $alignItems:$absent, $alignContent:$absent,
+  $flexWrap:$absent, $gap:$absent, $flexDirection:$absent, $placeContent:$absent){
   display: flex;
 
   @if $justifyContent != $absent {
@@ -12,16 +17,35 @@ $absent:'';
   @if $alignContent != $absent {
     align-content: $alignContent;
   }
+  @if $flexWrap != $absent {
+    flex-wrap: $flexWrap;
+  }
   @if $gap != $absent {
     gap: $gap;
   }
+  @if $flexDirection != $absent {
+    flex-direction: $flexDirection;
+  }
+  @if $placeContent != $absent {
+    place-content: $placeContent;
+  }
 }
 
-@mixin textTheme($fontSize:10px, $fontWeight:$absent) {
+@mixin textTheme($fontSize:10px, $fontWeight:$absent, $textAlign:$absent, $lineHeight:$absent) {
   font-family: sans-serif;
   font-size: $fontSize;
 
   @if $fontWeight != $absent {
     font-weight: $fontWeight;
   }
+  @if $textAlign != $absent {
+    text-align: $textAlign;
+  }
+  @if $lineHeight != $absent {
+    line-height: $lineHeight;
+  }
+}
+
+@mixin getColor($color) {
+  color:$color
 }

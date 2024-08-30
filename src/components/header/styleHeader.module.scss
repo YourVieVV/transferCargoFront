@@ -3,8 +3,8 @@
 .header{
   height: 50px;
   width: 100%;
-  background-color: #2f343a;
-  color: #ffffff;
+  background-color: $colorDarkGray;
+  color: $colorWhite;
 
   @include flexBasePack($justifyContent:center);
 }
@@ -29,8 +29,8 @@
 }
 
 .logo {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
 }
 
 .logoText {
@@ -81,7 +81,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #C8A35F;
+  background-color: $colorBrown;
   transition: all .5s;
   z-index: -1;
   transform: translateY(100%);

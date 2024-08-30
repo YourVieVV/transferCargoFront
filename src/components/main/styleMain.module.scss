@@ -1,0 +1,115 @@
+@import "src/usedEverywhereStyles.module";
+
+.cargoImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 260px;
+  background-size: cover;
+  background-image: url('../../../public/cargoBackground.jpg');
+  background-repeat:no-repeat;
+}
+
+.bgGradientMoreDetails{
+  height: 180px;
+  background:
+          linear-gradient(
+                  to left,
+                  $colorLightGray 34%,
+                  $colorDarkGray 34% 65%,
+                  $colorLightGray 65% 100%,
+  );
+
+  @include flexBasePack($justifyContent:center);
+}
+
+.main {
+  width: 100%;
+  font-family: sans-serif;
+
+  @include getColor($colorWhite)
+}
+
+.containerInMain {
+  width: 80%;
+
+  @include flexBasePack($justifyContent:center);
+}
+
+.containerCargoText {
+  width: 380px;
+  height: 100px;
+  border: solid 0.5px $colorBrown;
+
+  @include flexBasePack($justifyContent:center, $flexWrap:wrap, $alignContent:center, $gap:12px);
+}
+
+.bigTextInContainerCargo {
+  height: 26px;
+
+  @include textTheme($fontSize:24px, $textAlign:center, $fontWeight:bold);
+}
+
+.smallTextInContainerCargo {
+  width: 72%;
+
+  @include textTheme($fontSize:7px, $textAlign:center);
+}
+
+.containerMoreDetails {
+  width: 80%;
+  height: 100%;
+
+  @include flexBasePack($flexWrap:wrap);
+}
+
+.leftSideBlockMoreDetails {
+  width: 50%;
+
+  @include flexBasePack($flexWrap:wrap, $gap:10px, $alignContent:center, $flexDirection:column, $placeContent:center);
+}
+
+.featureMoreDetails {
+  width: 40px;
+  height: 2px;
+  background-color: $colorBrown;
+
+}
+
+.bigTextMoreDetails {
+  @include textTheme($fontSize:18px, $textAlign:left);
+}
+.smallTextMoreDetails {
+  @include textTheme($fontSize:7px, $lineHeight:10px);
+}
+
+.buttonMoreDetails {
+  width: 100px;
+  box-shadow: none;
+  border-radius: 0;
+  background-color: $colorBrown;
+
+  @include textTheme();
+}
+
+.rightSideBlockMoreDetails {
+  width: 50%;
+  color: $colorBrown;
+
+  @include flexBasePack($flexWrap:wrap, $alignItems:center);
+}
+
+.containerImagesMoreDetails {
+  width: 50%;
+}
+
+.containerArrowMoreDetails {
+  width: 50%;
+
+  @include flexBasePack($flexDirection:column, $gap:60px);
+}
+
+.buttonArrow {
+  color: $colorBrown;
+  @include textTheme();
+}
