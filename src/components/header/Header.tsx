@@ -34,7 +34,7 @@ export const Header = () => {
         <div className={styleHeader.tab}>ТАРИФЫ</div>
         <div className={styleHeader.tab}>БИЗНЕСУ</div>
         <div className={styleHeader.tab}>ВАКАНСИИ</div>
-        <div className={styleHeader.tab}>КОНТАКТЫ</div>
+        <div className={styleHeader.tab}>ВОЙТИ</div>
       </div>
     </div>
   );

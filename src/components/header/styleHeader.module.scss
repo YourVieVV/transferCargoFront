@@ -72,6 +72,8 @@
   position: relative;
   overflow: hidden;
   z-index: 1;
+
+  @include textTheme($fontSize:8px,$fontWeight:bold);
 }
 
 .tab::before {

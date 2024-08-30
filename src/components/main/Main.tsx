@@ -29,6 +29,7 @@ export const Main = () => {
           </div>
         </div>
       </div>
+
       <div className={styles.bgGradientMoreDetails}>
         <div className={styles.containerMoreDetails}>
           <div className={styles.leftSideBlockMoreDetails}>
@@ -78,6 +79,12 @@ export const Main = () => {
           </div>
         </div>
       </div>
+
+        <div style={{height:'100px', backgroundColor:'#2f343a'}}>
+            <div style={{width:'80%'}}>
+
+            </div>
+        </div>
     </>
   );
 };
