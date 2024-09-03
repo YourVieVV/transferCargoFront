@@ -1,7 +1,7 @@
 @import "src/usedEverywhereStyles.module";
 
 .header{
-  height: 50px;
+  height: 100px;
   width: 100%;
   background-color: $colorDarkGray;
   color: $colorWhite;
@@ -22,44 +22,44 @@
 }
 
 .containerLogo {
-  width: 100px;
+  width: 200px;
   border-right: solid 0.2px;
 
   @include flexBasePack($alignItems:center);
 }
 
 .logo {
-  width: 36px;
-  height: 36px;
+  width: 80px;
+  height: 80px;
 }
 
 .logoText {
-  padding-left: 3px;
+  padding-left: 6px;
 
   @include textTheme();
 }
 
 .containerPoint {
-  width: 100px;
+  width: 200px;
 
   @include flexBasePack($alignItems:center, $justifyContent:center);
 }
 
 .point{
-  margin-right: 4px;
+  margin-right: 8px;
 }
 
 .textPointer {
-  padding-right: 20px;
+  padding-right: 40px;
 
-  @include textTheme($fontSize:7px);
+  @include textTheme($fontSize:16px);
 }
 
 .tabContainer {
   width: 50%;
 
   @include flexBasePack($alignItems:center, $justifyContent:center);
-  @include textTheme($fontSize:8px);
+  @include textTheme($fontSize:16px);
 }
 
 .tab {
@@ -73,7 +73,7 @@
   overflow: hidden;
   z-index: 1;
 
-  @include textTheme($fontSize:8px,$fontWeight:bold);
+  @include textTheme($fontSize:16px,$fontWeight:bold);
 }
 
 .tab::before {

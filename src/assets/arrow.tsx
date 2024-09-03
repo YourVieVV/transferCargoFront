@@ -4,8 +4,8 @@ export const Arrow = ({ turn = 0 }) => {
   return (
     <div style={{ transform: `rotate(${turn}deg)` }}>
       <svg
-        width="36"
-        height="8"
+        width="40"
+        height="16"
         viewBox="0 0 67 24"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

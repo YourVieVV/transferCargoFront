@@ -31,7 +31,7 @@ $colorLightGray:#393f47;
   }
 }
 
-@mixin textTheme($fontSize:10px, $fontWeight:$absent, $textAlign:$absent, $lineHeight:$absent) {
+@mixin textTheme($fontSize:20px, $fontWeight:$absent, $textAlign:$absent, $lineHeight:$absent) {
   font-family: sans-serif;
   font-size: $fontSize;
 
