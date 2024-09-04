@@ -1,0 +1,17 @@
+@import "src/usedEverywhereStyles.module";
+
+.inputContainer {
+  width: 30%;
+
+  @include getColor($colorBrown);
+  @include flexBasePack($flexWrap:wrap, $gap:2px, $flexDirection:column);
+
+  .label {
+    @include textTheme();
+  }
+
+  .inputAddon {
+    @include getColor($colorBrown);
+    @include textTheme($fontSize:16px, $fontWeight:bold);
+  }
+}

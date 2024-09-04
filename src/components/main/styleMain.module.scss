@@ -11,7 +11,7 @@
 }
 
 .bgGradientCalcBlock{
-  height: 400px;
+  height: 460px;
   background:
           linear-gradient(
                   to left,
@@ -21,6 +21,25 @@
   );
 
   @include flexBasePack($justifyContent:center);
+
+  .calcContainer {
+    width: 80%;
+    height: 100%;
+
+    @include flexBasePack($flexWrap:wrap, $alignContent:center, $alignItems:flex-start);
+
+    .leftSideCalcBlock {
+      width: 50%;
+
+      @include flexBasePack($flexWrap:wrap, $gap:20px, $flexDirection:column, $justifyContent:center);
+    }
+
+    .rightSideBlockMoreDetails {
+      width: 50%;
+
+      @include flexBasePack($flexWrap:wrap, $gap:20px, $flexDirection:column, $justifyContent:center)
+    }
+  }
 }
 
 .main {
@@ -56,18 +75,9 @@
   @include textTheme($fontSize:20px, $textAlign:center);
 }
 
-.calcContainer {
-  width: 80%;
-  height: 100%;
 
-  @include flexBasePack($flexWrap:wrap);
-}
 
-.leftSideCalcBlock {
-  width: 50%;
 
-  @include flexBasePack($flexWrap:wrap, $gap:10px, $flexDirection:column, $justifyContent:center);
-}
 
 .feature {
   width: 80px;
@@ -76,7 +86,7 @@
 }
 
 .bigTextHCalc {
-  @include textTheme($fontSize:36px, $textAlign:left);
+  @include textTheme($fontSize:32px, $textAlign:left);
 }
 .smallTextMoreDetails {
   @include textTheme($fontSize:16px, $lineHeight:10px);
@@ -88,17 +98,22 @@
   .citiesInputsContainer {
     width: 100%;
 
-    @include flexBasePack($flexWrap:nowrap, $gap:10px, $alignItems:center, $justifyContent:center);
+    @include flexBasePack($flexWrap:nowrap, $gap:10px, $alignItems:center, $justifyContent:space-between);
 
     .arrowBetweenInputs {
       height: 100%;
+      width: 20%;
 
-      @include flexBasePack($flexWrap:wrap, $alignContent:flex-end, $justifyContent:center);
+      @include flexBasePack($flexWrap:wrap, $alignContent:center, $flexDirection:column, $justifyContent:center);
     }
   }
 
   .characteristicsCargoForm {
-    @include flexBasePack($flexWrap:wrap, $gap:10px);
+    @include flexBasePack($flexWrap:wrap, $gap:14px);
+
+    .textH {
+      @include textTheme();
+    }
 
     .inputsCargoDimensionsContainer {
       width:100%;
@@ -109,9 +124,19 @@
     .inputWeightAndButtonCalcContainer{
       width: 100%;
 
-      @include flexBasePack($flexWrap:wrap, $gap:20px, $justifyContent:space-between, $alignItems:flex-end);
+      @include flexBasePack($flexWrap:wrap, $gap:20px);
+
+      .inputContainer {
+        width: 100%;
+
+        @include flexBasePack($flexWrap:wrap, $gap:20px, $justifyContent:space-between, $alignItems:flex-end);
+      }
     }
   }
+}
+
+.titleBlockContainer {
+  @include flexBasePack($flexWrap:wrap, $gap:10px, $flexDirection:column);
 }
 
 
@@ -122,7 +147,8 @@
 
 
 .buttonMoreDetails {
-  width: 42%;
+  width: 40%;
+  height: 54px;
   box-shadow: none;
   border-radius: 0;
   background-color: $colorBrown;
@@ -130,12 +156,7 @@
   @include textTheme();
 }
 
-.rightSideBlockMoreDetails {
-  width: 50%;
-  //color: $colorBrown;
 
-  @include flexBasePack($flexWrap:wrap, $gap:10px, $flexDirection:column, $justifyContent:center)
-}
 
 .containerImagesMoreDetails {
   width: 50%;

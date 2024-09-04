@@ -1,7 +1,7 @@
 import React from 'react';
 import * as styles from '@/components/main/styleMain.module.scss';
-import { Button } from 'antd';
 import { Arrow } from '@/assets/arrow';
+import { Button } from '@mui/material';
 
 const Main = () => {
   const arrayTransferImages = [
@@ -29,13 +29,7 @@ const Main = () => {
               <br />
               Белоруссия со всеми документами.
             </span>
-            <Button
-              className={styles.buttonMoreDetails}
-              size="small"
-              type="primary"
-            >
-              ПОДРОБНЕЕ
-            </Button>
+            <Button className={styles.buttonMoreDetails}>ПОДРОБНЕЕ</Button>
           </div>
           <div className={styles.rightSideBlockMoreDetails}>
             <div className={styles.containerImagesMoreDetails}>
@@ -44,24 +38,24 @@ const Main = () => {
               ))}
             </div>
             <div className={styles.containerArrowMoreDetails}>
-              <Button
-                type="link"
-                className={styles.buttonArrow}
-                icon={<Arrow />}
-                iconPosition={'end'}
-                size="small"
-              >
-                След
-              </Button>
-              <Button
-                type="link"
-                className={styles.buttonArrow}
-                icon={<Arrow turn={180} />}
-                iconPosition={'end'}
-                size="small"
-              >
-                Назад
-              </Button>
+              {/*<Button*/}
+              {/*  type="link"*/}
+              {/*  className={styles.buttonArrow}*/}
+              {/*  icon={<Arrow />}*/}
+              {/*  iconPosition={'end'}*/}
+              {/*  size="small"*/}
+              {/*>*/}
+              {/*  След*/}
+              {/*</Button>*/}
+              {/*<Button*/}
+              {/*  type="link"*/}
+              {/*  className={styles.buttonArrow}*/}
+              {/*  icon={<Arrow turn={180} />}*/}
+              {/*  iconPosition={'end'}*/}
+              {/*  size="small"*/}
+              {/*>*/}
+              {/*  Назад*/}
+              {/*</Button>*/}
             </div>
           </div>
         </div>

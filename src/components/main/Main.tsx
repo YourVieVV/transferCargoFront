@@ -2,8 +2,9 @@ import React from 'react';
 import * as styles from './styleMain.module.scss';
 import { Arrow } from '@/assets/arrow';
 import { Airplane } from '@/assets/airplane';
-import { Input, InputNumber } from 'antd';
-import { Button } from 'antd';
+import { Button, InputAdornment, TextField } from '@mui/material';
+import * as style from '@/components/dataEntry/styleDataEntry.module.scss';
+import SearchIcon from '@mui/icons-material/Search';
 
 export const Main = () => {
   return (
@@ -25,134 +26,156 @@ export const Main = () => {
       <div className={styles.bgGradientCalcBlock}>
         <div className={styles.calcContainer}>
           <div className={styles.leftSideCalcBlock}>
-            <div className={styles.feature} />
-            <span className={styles.bigTextHCalc}>КАЛЬКУЛЯТОР</span>
+            <div className={styles.titleBlockContainer}>
+              <div className={styles.feature} />
+              <span className={styles.bigTextHCalc}>КАЛЬКУЛЯТОР</span>
+            </div>
             <div className={styles.calcForm}>
               <div className={styles.citiesInputsContainer}>
-                <div>
-                  <span>Город отправления</span>
-                  <Input
-                    size="large"
-                    min={1}
-                    max={10}
-                    defaultValue={3}
-                    onChange={() => {}}
-                  />
-                </div>
+                <TextField
+                  style={{ width: '40%' }}
+                  label={<span>Город отправления</span>}
+                  size="medium"
+                  onChange={() => {}}
+                />
                 <div className={styles.arrowBetweenInputs}>
                   <Arrow />
                   <Arrow turn={180} />
                 </div>
-                <div>
-                  <span>Город прибытия</span>
-                  <Input
-                    size="large"
-                    min={1}
-                    max={10}
-                    defaultValue={3}
-                    onChange={() => {}}
-                  />
-                </div>
+                <TextField
+                  style={{ width: '40%' }}
+                  label={<span>Город прибытия</span>}
+                  size="medium"
+                  onChange={() => {}}
+                />
               </div>
 
               <div className={styles.characteristicsCargoForm}>
-                <div style={{ width: '100%' }}>
-                  <span>Характеристики груза</span>
+                <div>
+                  <span className={styles.textH}>Характеристики груза</span>
                 </div>
                 <div className={styles.inputsCargoDimensionsContainer}>
-                  <div
-                    style={{
-                      display: 'flex',
-                      flexWrap: 'wrap',
-                      flexDirection: 'column',
-                      width: '30%',
+                  <TextField
+                    sx={{ width: '30%' }}
+                    label={<span className={style.label}>Длина</span>}
+                    color={'primary'}
+                    slotProps={{
+                      input: {
+                        endAdornment: (
+                          <InputAdornment
+                            position="end"
+                            className={style.inputAddon}
+                          >
+                            см
+                          </InputAdornment>
+                        ),
+                      },
                     }}
-                  >
-                    <span>Длина</span>
-                    <InputNumber
-                      size="large"
-                      addonAfter={'см'}
-                      min={1}
-                      max={10}
-                      defaultValue={3}
-                      onChange={() => {}}
-                    />
-                  </div>
-                  <div
-                    style={{
-                      display: 'flex',
-                      flexWrap: 'wrap',
-                      flexDirection: 'column',
-                      width: '30%',
+                    size="medium"
+                    onChange={() => {}}
+                  />
+                  <TextField
+                    label={<span className={style.label}>Ширина</span>}
+                    sx={{ width: '30%' }}
+                    color={'primary'}
+                    slotProps={{
+                      input: {
+                        endAdornment: (
+                          <InputAdornment
+                            position="end"
+                            className={style.inputAddon}
+                          >
+                            см
+                          </InputAdornment>
+                        ),
+                      },
                     }}
-                  >
-                    <span>Ширина</span>
-                    <InputNumber
-                      size="large"
-                      addonAfter={'см'}
-                      min={1}
-                      max={10}
-                      defaultValue={3}
-                      onChange={() => {}}
-                    />
-                  </div>
-                  <div
-                    style={{
-                      display: 'flex',
-                      flexWrap: 'wrap',
-                      flexDirection: 'column',
-                      width: '30%',
+                    size="medium"
+                    onChange={() => {}}
+                  />
+                  <TextField
+                    label={<span className={style.label}>Высота</span>}
+                    sx={{ width: '30%' }}
+                    color={'primary'}
+                    slotProps={{
+                      input: {
+                        endAdornment: (
+                          <InputAdornment
+                            position="end"
+                            className={style.inputAddon}
+                          >
+                            см
+                          </InputAdornment>
+                        ),
+                      },
                     }}
-                  >
-                    <span>Высота</span>
-                    <InputNumber
-                      size="large"
-                      addonAfter={'см'}
-                      min={1}
-                      max={10}
-                      defaultValue={3}
-                      onChange={() => {}}
-                    />
-                  </div>
+                    size="medium"
+                    onChange={() => {}}
+                  />
                 </div>
 
                 <div className={styles.inputWeightAndButtonCalcContainer}>
-                  <div
-                    style={{
-                      display: 'flex',
-                      flexWrap: 'wrap',
-                      flexDirection: 'column',
-                      width: '45%',
-                    }}
-                  >
-                    <span>Вес</span>
-                    <InputNumber
-                      size="large"
-                      addonAfter={'кг'}
-                      min={1}
-                      max={10}
-                      defaultValue={3}
+                  <div className={styles.inputContainer}>
+                    <TextField
+                      style={{ width: '40%' }}
+                      label={<span className={style.label}>Вес</span>}
+                      color={'primary'}
+                      slotProps={{
+                        input: {
+                          endAdornment: (
+                            <InputAdornment
+                              position="end"
+                              className={style.inputAddon}
+                            >
+                              кг
+                            </InputAdornment>
+                          ),
+                        },
+                      }}
+                      size="medium"
                       onChange={() => {}}
                     />
+                    <Button
+                      className={styles.buttonMoreDetails}
+                      size="medium"
+                      variant="contained"
+                    >
+                      ПОСЧИТАТЬ
+                    </Button>
                   </div>
-
-                  <Button
-                    className={styles.buttonMoreDetails}
-                    size="large"
-                    type="primary"
-                  >
-                    ПОСЧИТАТЬ
-                  </Button>
-                  <div style={{ width: '100%' }}>
-                    <span>Итого: </span>
+                  <div>
+                    <span className={styles.textH}>
+                      <u>Итого:</u>{' '}
+                    </span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div className={styles.rightSideBlockMoreDetails}>
-            <div className={styles.feature} />
-            <span className={styles.bigTextHCalc}>ОТСЛЕЖИВАНИЕ</span>
+            <div className={styles.titleBlockContainer}>
+              <div className={styles.feature} />
+              <span className={styles.bigTextHCalc}>ОТСЛЕЖИВАНИЕ</span>
+            </div>
+            <div>
+              <TextField
+                label={
+                  <span className={style.label}>Введите номер заказа</span>
+                }
+                color={'primary'}
+                size="medium"
+                onChange={() => {}}
+              />
+              <Button
+                className={styles.buttonMoreDetails}
+                size="medium"
+                variant="contained"
+                startIcon={<SearchIcon />}
+              >
+                НАЙТИ
+              </Button>
+            </div>
+            <div>TEXTASDASDSD</div>
           </div>
         </div>
       </div>
