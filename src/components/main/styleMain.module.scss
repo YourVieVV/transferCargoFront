@@ -26,18 +26,19 @@
     width: 80%;
     height: 100%;
 
-    @include flexBasePack($flexWrap:wrap, $alignContent:center, $alignItems:flex-start);
+    @include flexBasePack($flexWrap:wrap, $alignContent:center, $alignItems:flex-start, $justifyContent:space-between);
 
     .leftSideCalcBlock {
-      width: 50%;
+      width: 45%;
 
       @include flexBasePack($flexWrap:wrap, $gap:20px, $flexDirection:column, $justifyContent:center);
     }
 
     .rightSideBlockMoreDetails {
-      width: 50%;
+      width: 40%;
+      height: 350px;
 
-      @include flexBasePack($flexWrap:wrap, $gap:20px, $flexDirection:column, $justifyContent:center)
+      @include flexBasePack($flexWrap:wrap, $gap:20px, $flexDirection:column)
     }
   }
 }
@@ -145,15 +146,18 @@
 
 
 
+.buttonText{
+  color: $colorWhite;
 
-.buttonMoreDetails {
+  @include textTheme($fontSize:18px);
+}
+
+.buttonCounts {
   width: 40%;
   height: 54px;
   box-shadow: none;
   border-radius: 0;
   background-color: $colorBrown;
-
-  @include textTheme();
 }
 
 
