@@ -90,7 +90,7 @@
   @include textTheme($fontSize:32px, $textAlign:left);
 }
 .smallTextMoreDetails {
-  @include textTheme($fontSize:16px, $lineHeight:10px);
+  @include textTheme($fontSize:18px, );
 }
 
 .calcForm {
@@ -160,7 +160,27 @@
   background-color: $colorBrown;
 }
 
+.squareBlock{
+  width:260px;
+  height:160px;
+  background-color:$colorLightGray;
 
+  @include flexBasePack($justifyContent:center, $alignItems:center);
+
+  .iconContainerAbout{
+    @include flexBasePack($flexDirection:column, $alignItems:center, $gap:20px);
+
+    .iconBlockAbout{
+      width:54px;
+      height:54px;
+      border-radius:100px;
+      background-color:$colorBrown;
+
+      @include flexBasePack($justifyContent:center, $alignItems:center, );
+    }
+  }
+
+}
 
 .containerImagesMoreDetails {
   width: 50%;
@@ -186,3 +206,38 @@ background:linear-gradient(
                 $colorLightGray 34% 65%,
                 $colorDarkGray 65% 100%,)
 }
+
+.defaultText{
+    @include textTheme();
+
+}
+
+.aboutCompanyContainer{
+  height: 460px;
+  background-color: $colorDarkGray;
+  @include flexBasePack($justifyContent:center);
+
+  .aboutCompanyBlock{
+    width: 80%;
+
+    @include flexBasePack($alignItems:center);
+
+    .leftSideAboutCompany {
+      width: 50%;
+
+      @include flexBasePack($flexDirection:column, $flexWrap:wrap, $gap:20px);
+    }
+
+    .rightSideAboutCompany {
+      width: 50%;
+
+      @include flexBasePack($justifyContent:flex-end, $gap:2px);
+
+      .iconBlockContainer{
+        @include flexBasePack($flexDirection:column, $gap:2px);
+      }
+    }
+  }
+}
+
+
