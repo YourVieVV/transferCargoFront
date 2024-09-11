@@ -2,9 +2,11 @@ import React, { FC } from 'react';
 import './globalStyles.scss';
 import * as styleHeader from './components/header/styleHeader.module.scss';
 import * as styleMain from './components/main/styleMain.module.scss';
+import * as styleFooter from './components/footer/styleFooter.module.scss';
 import { Header } from '@/components/header';
 import { Main } from '@/components/main';
 import { createTheme, ThemeProvider } from '@mui/material';
+import { Footer } from '@/components/footer';
 
 export const App: FC = () => {
   const theme = createTheme({
@@ -33,6 +35,9 @@ export const App: FC = () => {
         <main className={styleMain.main}>
           <Main />
         </main>
+        <footer className={styleFooter.footer}>
+          <Footer />
+        </footer>
       </ThemeProvider>
     </div>
   );

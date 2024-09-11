@@ -1,0 +1,80 @@
+@import "src/usedEverywhereStyles.module";
+
+.bgGradientCalcBlock{
+  height: 480px;
+  background:
+    linear-gradient(
+      to left,
+      $colorLightGray 34%,
+      $colorDarkGray 34% 65%,
+      $colorLightGray 65% 100%,
+    );
+
+  @include flexBasePack($justifyContent:center);
+
+  .calcContainer {
+    width: 80%;
+
+    @include flexBasePack($flexWrap:wrap, $alignContent:center, $alignItems:flex-start, $justifyContent:space-between);
+
+    .leftSideCalcBlock {
+      width: 45%;
+
+      @include flexBasePack($flexWrap:wrap, $gap:20px, $flexDirection:column, $justifyContent:center);
+
+      .calcForm {
+        @include flexBasePack($flexWrap:wrap, $gap:20px);
+
+        .citiesInputsContainer {
+          width: 100%;
+
+          @include flexBasePack($flexWrap:nowrap, $gap:10px, $alignItems:center, $justifyContent:space-between);
+
+          .arrowBetweenInputs {
+            height: 100%;
+            width: 20%;
+
+            @include flexBasePack($flexWrap:wrap, $alignContent:center, $flexDirection:column, $justifyContent:center);
+          }
+        }
+        .characteristicsCargoForm {
+          @include flexBasePack($flexWrap:wrap, $gap:14px);
+
+          .inputsCargoDimensionsContainer {
+            width:100%;
+
+            @include flexBasePack($flexWrap:nowrap, $justifyContent:space-between);
+          }
+          .inputWeightAndButtonCalcContainer{
+            width: 100%;
+
+            @include flexBasePack($flexWrap:wrap, $gap:20px);
+
+            .inputContainer {
+              width: 100%;
+
+              @include flexBasePack($flexWrap:wrap, $gap:20px, $justifyContent:space-between, $alignItems:flex-end);
+            }
+          }
+        }
+      }
+    }
+
+    .rightSideBlockMoreDetails {
+      width: 40%;
+      height: 350px;
+
+      @include flexBasePack($flexWrap:wrap, $gap:20px, $flexDirection:column)
+    }
+  }
+}
+
+.buttonCounts {
+  width: 40%;
+  height: 54px;
+}
+.buttonText{
+  color: $colorWhite;
+
+  @include textTheme($fontSize:18px);
+}

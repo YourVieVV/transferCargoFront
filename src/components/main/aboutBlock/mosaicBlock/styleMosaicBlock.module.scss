@@ -1,0 +1,62 @@
+@import "src/usedEverywhereStyles.module";
+
+.aboutCompanyMosaicContainer{
+  height: 480px;
+  background-color: $colorDarkGray;
+  @include flexBasePack($justifyContent:center, $alignItems:center);
+
+  .aboutCompanyMosaicBlock {
+    background:
+      linear-gradient(
+        to left,
+        $colorDarkGray 34%,
+        $colorLightGray 34% 65%,
+        $colorDarkGray 65% 100%,
+      );
+
+    height: 400px;
+
+    @include get80Container();
+
+    .leftSideMosaic {
+      width: 50%;
+
+      @include flexBasePack($flexWrap:wrap, $gap:20px, $alignContent:center);
+    }
+    .rightSideMosaic {
+      width: 50%;
+
+      @include flexBasePack($justifyContent:flex-end, $alignItems:center);
+
+      .mosaicContainer {
+        width:546px; height: 304px;
+
+        @include flexBasePack($flexWrap:wrap);
+
+        .mosaic {
+          width:180px; height:150px;
+          background-color: #ffffff;
+          border: 1px solid $colorBrown;
+
+          @include flexBasePack($flexDirection:column, $justifyContent:center, $alignItems:center);
+
+          .mosaicHText {
+            color:$colorBlack;
+
+            @include textTheme($fontSize:36px, $fontWeight:bold);
+          }
+          .mosaicMiddleText {
+            color:$colorBlack;
+
+            @include textTheme($fontSize:24px,);
+          }
+          .mosaicSmallText {
+            color:$colorBlack;
+
+            @include textTheme($fontSize:16px);
+          }
+        }
+      }
+    }
+  }
+}

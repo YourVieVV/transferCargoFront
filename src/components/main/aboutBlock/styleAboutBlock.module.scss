@@ -1,0 +1,56 @@
+@import "src/usedEverywhereStyles.module";
+
+.aboutCompanyContainer{
+  height: 480px;
+  background-color: $colorDarkGray;
+  @include flexBasePack($justifyContent:center);
+
+  .aboutCompanyBlock{
+    width: 80%;
+
+    @include flexBasePack($alignItems:center);
+
+    .leftSideAboutCompany {
+      width: 50%;
+
+      @include flexBasePack($flexDirection:column, $gap:20px);
+
+      .smallTextMoreDetails {
+        @include textTheme($fontSize:18px);
+      }
+    }
+
+    .rightSideAboutCompany {
+      width: 50%;
+
+      @include flexBasePack($justifyContent:flex-end, $gap:2px);
+
+      .iconBlockContainer{
+        width: 524px;
+
+        @include flexBasePack($flexWrap:wrap, $gap:2px);
+
+        .squareBlock{
+          width:260px;
+          height:160px;
+          background-color:$colorLightGray;
+
+          @include flexBasePack($justifyContent:center, $alignItems:center);
+
+          .iconContainerAbout{
+            @include flexBasePack($flexDirection:column, $alignItems:center, $gap:20px);
+
+            .iconBlockAbout{
+              width:54px;
+              height:54px;
+              border-radius:100px;
+              background-color:$colorBrown;
+
+              @include flexBasePack($justifyContent:center, $alignItems:center, );
+            }
+          }
+        }
+      }
+    }
+  }
+}

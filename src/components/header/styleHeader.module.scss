@@ -10,88 +10,82 @@
 }
 
 .containerInHeader {
-  width: 80%;
+  @include get80Container();
 
-  @include flexBasePack();
-}
+  .containerHeaderLeftSide {
+    width: 50%;
 
-.containerHeaderLeftSide {
-  width: 50%;
+    @include flexBasePack($alignItems:center);
 
-  @include flexBasePack($alignItems:center);
-}
+    .containerPoint {
+      width: 200px;
 
-.containerLogo {
-  width: 200px;
-  border-right: solid 0.2px;
+      @include flexBasePack($alignItems:center, $justifyContent:flex-end);
 
-  @include flexBasePack($alignItems:center);
-}
+      .point{
+        margin-right: 8px;
+      }
+      .textPointer {
+        padding-right: 40px;
 
-.logo {
-  width: 80px;
-  height: 80px;
-}
+        @include textTheme($fontSize:16px);
+      }
+    }
 
-.logoText {
-  padding-left: 6px;
+    .containerLogo {
+      width: 200px;
+      border-right: solid 0.2px;
 
-  @include textTheme();
-}
+      @include flexBasePack($alignItems:center);
 
-.containerPoint {
-  width: 200px;
+      .logo {
+        width: 80px;
+        height: 80px;
+      }
+      .logoText {
+        padding-left: 6px;
 
-  @include flexBasePack($alignItems:center, $justifyContent:center);
-}
+        @include textTheme();
+      }
+    }
+  }
 
-.point{
-  margin-right: 8px;
-}
+  .tabsContainer {
+    width: 50%;
 
-.textPointer {
-  padding-right: 40px;
+    @include flexBasePack();
 
-  @include textTheme($fontSize:16px);
-}
+    .tab {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      width: 20%;
+      justify-content: center;
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
 
-.tabContainer {
-  width: 50%;
-
-  @include flexBasePack($alignItems:center, $justifyContent:center);
-}
-
-.tab {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  width: 20%;
-  justify-content: center;
-  text-decoration: none;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-
-  @include textTheme($fontSize:16px,$fontWeight:bold);
-}
-
-.tab::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: $colorBrown;
-  transition: all .5s;
-  z-index: -1;
-  transform: translateY(100%);
-}
-
-.tab:hover::before {
-  transform: translateY(0);
-  cursor: pointer;
-}
-.tab:hover {
-  cursor: pointer;
+      @include textTheme($fontSize:16px,$fontWeight:bold);
+    }
+    .tab::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $colorBrown;
+      transition: all .5s;
+      z-index: -1;
+      transform: translateY(100%);
+    }
+    .tab:hover::before {
+      transform: translateY(0);
+      cursor: pointer;
+    }
+    .tab:hover {
+      cursor: pointer;
+    }
+  }
 }

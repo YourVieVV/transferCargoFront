@@ -29,7 +29,7 @@ export const Header = () => {
         </div>
       </div>
 
-      <div className={styleHeader.tabContainer}>
+      <div className={styleHeader.tabsContainer}>
         <div className={styleHeader.tab}>УСЛУГИ</div>
         <div className={styleHeader.tab}>ТАРИФЫ</div>
         <div className={styleHeader.tab}>БИЗНЕСУ</div>

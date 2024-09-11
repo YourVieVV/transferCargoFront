@@ -1,8 +1,9 @@
 import React, { FC } from 'react';
-import * as styles from '@/components/main/styleMain.module.scss';
+import * as stylesMain from '@/components/main/styleMain.module.scss';
+import * as styles from './styleCalcAndTrackBlock.module.scss';
 import { Button, InputAdornment, TextField } from '@mui/material';
 import { Arrow } from '@/assets/arrow';
-import * as style from '@/components/dataEntry/styleDataEntry.module.scss';
+import * as stylesEntry from '@/components/dataEntry/styleDataEntry.module.scss';
 import SearchIcon from '@mui/icons-material/Search';
 
 export const CalcAndTrackBlock: FC = ({}) => {
@@ -10,9 +11,9 @@ export const CalcAndTrackBlock: FC = ({}) => {
     <div className={styles.bgGradientCalcBlock}>
       <div className={styles.calcContainer}>
         <div className={styles.leftSideCalcBlock}>
-          <div className={styles.titleBlockContainer}>
-            <div className={styles.feature} />
-            <span className={styles.bigTextHCalc}>КАЛЬКУЛЯТОР</span>
+          <div className={stylesMain.titleBlockContainer}>
+            <div className={stylesMain.feature} />
+            <span className={stylesMain.bigHText}>КАЛЬКУЛЯТОР</span>
           </div>
           <div className={styles.calcForm}>
             <div className={styles.citiesInputsContainer}>
@@ -35,20 +36,21 @@ export const CalcAndTrackBlock: FC = ({}) => {
             </div>
 
             <div className={styles.characteristicsCargoForm}>
-              <div>
-                <span className={styles.textH}>Характеристики груза</span>
-              </div>
+              <span className={stylesMain.defaultText}>
+                Характеристики груза
+              </span>
+
               <div className={styles.inputsCargoDimensionsContainer}>
                 <TextField
                   sx={{ width: '30%' }}
-                  label={<span className={style.label}>Длина</span>}
+                  label={<span className={stylesEntry.label}>Длина</span>}
                   color={'primary'}
                   slotProps={{
                     input: {
                       endAdornment: (
                         <InputAdornment
                           position="end"
-                          className={style.inputAddon}
+                          className={stylesEntry.inputAddon}
                         >
                           см
                         </InputAdornment>
@@ -59,7 +61,7 @@ export const CalcAndTrackBlock: FC = ({}) => {
                   onChange={() => {}}
                 />
                 <TextField
-                  label={<span className={style.label}>Ширина</span>}
+                  label={<span className={stylesEntry.label}>Ширина</span>}
                   sx={{ width: '30%' }}
                   color={'primary'}
                   slotProps={{
@@ -67,7 +69,7 @@ export const CalcAndTrackBlock: FC = ({}) => {
                       endAdornment: (
                         <InputAdornment
                           position="end"
-                          className={style.inputAddon}
+                          className={stylesEntry.inputAddon}
                         >
                           см
                         </InputAdornment>
@@ -78,7 +80,7 @@ export const CalcAndTrackBlock: FC = ({}) => {
                   onChange={() => {}}
                 />
                 <TextField
-                  label={<span className={style.label}>Высота</span>}
+                  label={<span className={stylesEntry.label}>Высота</span>}
                   sx={{ width: '30%' }}
                   color={'primary'}
                   slotProps={{
@@ -86,7 +88,7 @@ export const CalcAndTrackBlock: FC = ({}) => {
                       endAdornment: (
                         <InputAdornment
                           position="end"
-                          className={style.inputAddon}
+                          className={stylesEntry.inputAddon}
                         >
                           см
                         </InputAdornment>
@@ -102,14 +104,14 @@ export const CalcAndTrackBlock: FC = ({}) => {
                 <div className={styles.inputContainer}>
                   <TextField
                     style={{ width: '40%' }}
-                    label={<span className={style.label}>Вес</span>}
+                    label={<span className={stylesEntry.label}>Вес</span>}
                     color={'primary'}
                     slotProps={{
                       input: {
                         endAdornment: (
                           <InputAdornment
                             position="end"
-                            className={style.inputAddon}
+                            className={stylesEntry.inputAddon}
                           >
                             кг
                           </InputAdornment>
@@ -128,20 +130,19 @@ export const CalcAndTrackBlock: FC = ({}) => {
                     <span className={styles.buttonText}>ПОСЧИТАТЬ</span>
                   </Button>
                 </div>
-                <div>
-                  <span className={styles.textH}>
-                    <u>Итого:</u>{' '}
-                  </span>
-                </div>
+
+                <span className={stylesMain.defaultText}>
+                  <u>Итого:</u>
+                </span>
               </div>
             </div>
           </div>
         </div>
 
         <div className={styles.rightSideBlockMoreDetails}>
-          <div className={styles.titleBlockContainer}>
-            <div className={styles.feature} />
-            <span className={styles.bigTextHCalc}>ОТСЛЕЖИВАНИЕ</span>
+          <div className={stylesMain.titleBlockContainer}>
+            <div className={stylesMain.feature} />
+            <span className={stylesMain.bigHText}>ОТСЛЕЖИВАНИЕ</span>
           </div>
           <div
             style={{
@@ -151,14 +152,16 @@ export const CalcAndTrackBlock: FC = ({}) => {
             }}
           >
             <TextField
-              label={<span className={style.label}>Введите номер заказа</span>}
+              label={
+                <span className={stylesEntry.label}>Введите номер заказа</span>
+              }
               color={'primary'}
               size="medium"
               onChange={() => {}}
             />
             <Button
-              sx={{ color: '#ffffff', width: '40%' }}
-              className={styles.buttonMoreDetails}
+              sx={{ color: '#ffffff' }}
+              className={styles.buttonCounts}
               size="medium"
               variant="contained"
               startIcon={<SearchIcon sx={{ width: '28px', height: '28px' }} />}

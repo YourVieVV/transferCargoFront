@@ -1,0 +1,33 @@
+@import "src/usedEverywhereStyles.module";
+
+.cargoImage {
+  height: 520px;
+  background-size: cover;
+  background-image: url('../../../../public/cargoBackground.jpg');
+  background-repeat:no-repeat;
+
+  @include flexBasePack($justifyContent:center, $alignItems:center);
+
+  .containerInMain {
+    @include get80Container();
+
+    .containerCargoText {
+      width: 920px;
+      height: 245px;
+      border: solid 0.5px $colorBrown;
+
+      @include flexBasePack($justifyContent:center, $flexWrap:wrap, $alignContent:center, $gap:40px);
+
+      .cargoBigText {
+        height: 50px;
+
+        @include textTheme($fontSize:48px, $textAlign:center, $fontWeight:bold);
+      }
+      .cargoSmallText {
+        width: 90%;
+
+        @include textTheme($fontSize:20px, $textAlign:center);
+      }
+    }
+  }
+}
