@@ -11,7 +11,7 @@
 }
 
 .bgGradientCalcBlock{
-  height: 460px;
+  height: 480px;
   background:
           linear-gradient(
                   to left,
@@ -24,7 +24,6 @@
 
   .calcContainer {
     width: 80%;
-    height: 100%;
 
     @include flexBasePack($flexWrap:wrap, $alignContent:center, $alignItems:flex-start, $justifyContent:space-between);
 
@@ -213,7 +212,7 @@ background:linear-gradient(
 }
 
 .aboutCompanyContainer{
-  height: 460px;
+  height: 480px;
   background-color: $colorDarkGray;
   @include flexBasePack($justifyContent:center);
 
@@ -235,6 +234,67 @@ background:linear-gradient(
 
       .iconBlockContainer{
         @include flexBasePack($flexDirection:column, $gap:2px);
+      }
+    }
+  }
+}
+
+.aboutCompanySliderContainer{
+  height: 480px;
+  background-color: $colorDarkGray;
+  @include flexBasePack($justifyContent:center, $alignItems:center);
+
+  .aboutCompanySliderBlock {
+    background:
+            linear-gradient(
+                            to left,
+                            $colorDarkGray 34%,
+                            $colorLightGray 34% 65%,
+                            $colorDarkGray 65% 100%,
+            );
+
+    height: 400px;
+
+    @include get80Container();
+
+    .leftSideSlider {
+      width: 50%;
+
+      @include flexBasePack($flexWrap:wrap, $gap:20px, $alignContent:center);
+    }
+    .rightSideSlider {
+      width: 50%;
+
+      @include flexBasePack($justifyContent:flex-end, $alignItems:center);
+
+      .mosaicContainer {
+        width:546px; height: 304px;
+
+        @include flexBasePack($flexWrap:wrap);
+
+        .mosaic {
+          width:180px; height:150px;
+          background-color: #ffffff;
+          border: 1px solid $colorBrown;
+
+          @include flexBasePack($flexDirection:column, $justifyContent:center, $alignItems:center);
+
+          .mosaicHText {
+            color:$colorBlack;
+
+            @include textTheme($fontSize:40px, $fontWeight:bold);
+          }
+          .mosaicMiddleText {
+            color:$colorBlack;
+
+            @include textTheme($fontSize:24px,);
+          }
+          .mosaicSmallText {
+            color:$colorBlack;
+
+            @include textTheme($fontSize:16px);
+          }
+        }
       }
     }
   }

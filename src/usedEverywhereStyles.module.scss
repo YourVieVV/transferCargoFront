@@ -1,6 +1,7 @@
 $absent:'';
 $colorWhite:#ffffff;
 $colorBrown:#C8A35F;
+$colorBlack:#000000;
 $colorDarkGray:#2f343a;
 $colorLightGray:#393f47;
 
@@ -48,4 +49,10 @@ $colorLightGray:#393f47;
 
 @mixin getColor($color) {
   color:$color
+}
+
+@mixin get80Container(){
+  width: 80%;
+
+  @include flexBasePack($justifyContent:center);
 }

@@ -80,7 +80,9 @@ export const Main = () => {
                       />
                     </div>
                     <div>
-                      <span className={styles.defaultText}>ГРУЗОПЕРЕВОЗКИ</span>
+                      <span className={styles.defaultText}>
+                        МОРСКИЕ ПЕРЕВОЗКИ
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -93,10 +95,53 @@ export const Main = () => {
                       />
                     </div>
                     <div>
-                      <span className={styles.defaultText}>ГРУЗОПЕРЕВОЗКИ</span>
+                      <span className={styles.defaultText}>Ж/Д ПЕРЕВОЗКИ</span>
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className={styles.aboutCompanySliderContainer}>
+        <div className={styles.aboutCompanySliderBlock}>
+          <div className={styles.leftSideSlider}>
+            <div className={styles.titleBlockContainer}>
+              <div className={styles.feature} />
+              <span className={styles.bigTextHCalc}>АВИАПЕРЕВОЗКИ</span>
+            </div>
+            <div>
+              <span className={styles.defaultText}>
+                Мы сотрудничаем с ведущими авиакомпаниями, что обеспечивает
+                высокий уровень скорости доставки и безопасности вашего груза.
+                <br />
+                Наша сеть партнеров позволяет осуществлять перевозки в более чем
+                10 стран по всему миру.
+                <br />
+                Мы предлагаем индивидуальные решения для любых типов грузов,
+                включая скоропортящиеся и крупногабаритные товары
+              </span>
+            </div>
+          </div>
+          <div className={styles.rightSideSlider}>
+            <div className={styles.mosaicContainer}>
+              <div className={styles.mosaic}>
+                <span className={styles.mosaicHText}>48 </span>
+                <span className={styles.mosaicMiddleText}>офисов</span>
+                <span className={styles.mosaicSmallText}> в Европе и СНГ</span>
+              </div>
+              <div className={styles.mosaic}>
+                <span className={styles.mosaicHText}>6</span>
+                <span className={styles.mosaicMiddleText}>самолётов</span>
+                <span className={styles.mosaicSmallText}>Boeing</span>
+              </div>
+              <div className={styles.mosaic}>Image</div>
+              <div className={styles.mosaic}>Image</div>
+              <div className={styles.mosaic}>
+                <span className={styles.mosaicHText}>1200</span>
+                <span className={styles.mosaicMiddleText}>сотрудников</span>
+                <span className={styles.mosaicSmallText}>профессионалов</span>
               </div>
             </div>
           </div>
